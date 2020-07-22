@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JS DAY 6</title>
+        <h3>Question: 2 🌚</h3><br>
+    </head>
+    <body>
+        <p id="input"></p>
+        <script>
+        var num = prompt("Enter multiplication table number:");
+        var table = "";
+        var count = "";
+        if(num != ""){
+            for (let i = 1 ; i <= 10; i++){
+                count = num * i;
+                table += num + " x " + i + " = " + count + "<br/>"; 
+            }
+            document.getElementById("input").innerHTML = table;
+        }
+        else 
+            document.getElementById("input").innerHTML = "Please Enter any number!";
+        </script>    
+    </body>
+</html>

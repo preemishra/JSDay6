@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JS DAY 6</title>
+        <h3>Question: 1 🌚</h3><br>
+        
+        <script type="text/javascript">
+        var c = ["pink","blue", "green", "black", "cyan", "grey", "yellow", "red"];
+
+        function changeColor() {
+            setTimeout(function loop() {
+            document.bgColor = c.shift();
+            if (c.length) {
+                setTimeout(loop, 5000);
+            }
+            }, 5000);
+        }
+
+        function start() {
+            setInterval(changeColor(), 20000);
+        }
+        </script>
+    </head>
+    <body onload="start()">
+
+    </body>
+</html>

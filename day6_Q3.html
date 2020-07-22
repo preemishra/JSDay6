@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JS DAY 6</title>
+        <h3>Question: 3 🌚</h3><br>
+
+        <style>
+        body{
+            background-color: pink;
+            color: black;
+        }
+        .dark-mode{
+            background-color: black;
+            color: white;
+        }
+        </style>
+
+    </head>
+    <body>
+        <p id = "input"></p>
+        <p id = "clk"></p>
+        <button onclick="darkMode()">Change Mode</button>
+        <script>
+        //to display clock
+        function clock() {
+            var today = new Date();
+            var h = today.getHours();
+            var m = today.getMinutes();
+            var s = today.getSeconds();
+            m = checkTime(m);
+            s = checkTime(s);
+            document.getElementById("clk").innerHTML = h + " : " + m + " : " + s;
+            var t = setTimeout(clock, 500);
+        }
+        function checkTime(i) {
+            if (i < 10) {
+                i = "0" + i;
+            }
+            return i;
+        }
+
+        //For dark Mode
+        function darkMode() {
+            var element = document.body;
+            element.classList.toggle("dark-mode");
+        }
+        
+        //to display name
+        var name = prompt("Please Enter Your Name: ");
+        document.getElementById("input").innerHTML = "Welcome " + name + "🌚" + "<br><br>";
+        clock();
+        </script>    
+    </body>
+</html>
